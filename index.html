@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKA Real Estate</title>
+
+    <!--font awesome cdn link-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css file link-->
+     <link rel="stylesheet" href="../css/style.css">
+  </head>
+<body>
+  
+<!--header section starts-->
+
+<header class="header">
+
+  <nav class="navbar nav-1">
+    <section class="flex">
+      <a href="home.html" class="logo"><i class="fas fa-house"></i>WAKA
+      </a>
+
+     <!--
+      <ul>
+        <li><a href="add-property.html">post property<i class="fas fa-paper-plane"></i></a></li>
+      </ul>
+      -->
+    </section>
+  </nav>
+  
+  <nav class="navbar nav-2">
+    <section class="flex">
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="listings.html">Buy </a>
+          <!--
+        <ul>
+           <li><a href="#">House</a></li>
+           <li><a href="#">office</a></li>
+           <li><a href="#">apartment</a></li>
+           <li><a href="#">vila</a></li>
+           <li><a href="#"> furnished</a></li>
+        </ul>
+        -->
+      </li>
+       <li><a href="#">Sell </a>
+        <ul>
+           <li><a href="ap.html">post property</a></li>
+        <!--  <li><a href="seller-dashboard.html"> dashboard</a></li>-->
+        </ul>
+      </li>
+     
+       <li><a href="rent.html">Rent</a>
+         <!--
+        <ul>
+           <li><a href="#">House</a></li>
+           <li><a href="#">Flat</a></li>
+           <li><a href="#">Shop</a></li>
+        </ul>
+      </li>
+     -->
+       <li><a href="#">Help  </a>
+        <ul>
+           <li><a href="about.html">About us</a></i></li>
+           <li><a href="contact.html">Contact us</a></i></li>
+ 
+        </ul>
+      </li>
+      </ul>
+    </div>
+
+<ul>
+  <!--
+  <li><a href="#">favorite <i class="far fa-heart"></i></a></li>
+   -->
+  <li><a href="register.html">account </a>
+  <ul>
+    <li><a href="login.html">login</a></li>
+    <li><a href="register.html">register</a></li>    
+  </ul>
+  </li>
+</ul>
+
+    </section>
+  </nav>
+
+</header>
+
+<!--header section ends-->
+
+<!--  BACKGROUND starts  -->
+
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<!-- Top Badge -->
+
+<div class="top-badge">
+
+<div class="dot"></div>
+<!--
+<span>ADDIS ABABA'S PREMIER REAL ESTATE</span>
+-->
+<div class="divider"></div>
+
+<strong>Et.<br>2019</strong>
+
+</div>
+
+<!-- Hero Content -->
+
+<div class="hero-content">
+
+<p class="small-title">
+<!--All in One-->
+</p>
+
+<h1>
+Fully Finished
+<span>Apartment Hub in Ethiopia</span>
+</h1>
+
+<h3>
+FULLY FINISHED • MOVE-IN READY • VERIFIED
+</h3>
+<!--
+<p class="description">
+
+Discover our exclusive collection of finished apartments in prime locations.
+
+</p>
+-->
+<div class="buttons">
+
+<a href="listings.html" class="btn sale">
+
+<i class="fas fa-tag"></i>
+
+Browse For Buy
+
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+<a href="rent.html" class="btn rent">
+
+<i class="fas fa-key"></i>
+
+Browse For Rent
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Social Floating -->
+
+<div class="floating">
+
+<a href="@DerikWAKA" class="telegram">
+
+<i class="fab fa-telegram-plane"></i>
+
+</a>
+
+<a href="https://wa.me/251924274555" class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+</section>
+
+
+  <!--BACKGROUND ENDS-->
+
+<!-- home section starts -->
+
+<div class="home">
+
+    <section class="center">
+
+        <form id="propertySearchForm">
+
+            <h3>find your perfect home</h3>
+
+
+            <!-- LOCATION -->
+
+            <div class="box">
+
+                <p>
+                    enter location
+                    <span>*</span>
+                </p>
+
+                <input
+                    type="text"
+                    id="searchLocation"
+                    name="location"
+                    maxlength="50"
+                    placeholder="enter city name"
+                    class="input"
+                >
+
+            </div>
+
+
+            <div class="flex">
+
+
+                <!-- PROPERTY TYPE -->
+
+                <div class="box">
+
+                    <p>
+                        property type
+                        <span>*</span>
+                    </p>
+
+                    <select
+                        id="searchType"
+                        name="type"
+                        class="input"
+                    >
+
+                        <option value="">
+                            all types
+                        </option>
+
+                        <option value="flat">
+                            flat
+                        </option>
+
+                        <option value="house">
+                            house
+                        </option>
+
+                        <option value="apartment">
+                            apartment
+                        </option>
+
+                        <option value="villa">
+                            villa
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BEDROOMS -->
+
+                <div class="box">
+
+                    <p>
+                        how many rooms
+                        <span>*</span>
+                    </p>
+
+                    <select
+                        id="searchBedrooms"
+                        name="bhk"
+                        class="input"
+                    >
+
+                        <option value="">
+                            all rooms
+                        </option>
+
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4+</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MINIMUM BUDGET -->
+
+                <div class="box">
+
+                    <p>
+                        minimum budget
+                        <span>*</span>
+                    </p>
+
+                    <select
+                        id="searchMinimum"
+                        name="minimum"
+                        class="input"
+                    >
+
+                        <option value="">
+                            minimum budget
+                        </option>
+
+                        <option value="5000000">
+                            5 million
+                        </option>
+
+                        <option value="10000000">
+                            10 million
+                        </option>
+
+                        <option value="20000000">
+                            20 million
+                        </option>
+
+                        <option value="30000000">
+                            30 million
+                        </option>
+
+                        <option value="40000000">
+                            40 million
+                        </option>
+
+                        <option value="50000000">
+                            50 million
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MAXIMUM BUDGET -->
+
+                <div class="box">
+
+                    <p>
+                        maximum budget
+                        <span>*</span>
+                    </p>
+
+                    <select
+                        id="searchMaximum"
+                        name="maximum"
+                        class="input"
+                    >
+
+                        <option value="">
+                            maximum budget
+                        </option>
+
+                        <option value="5000000">
+                            5 million
+                        </option>
+
+                        <option value="10000000">
+                            10 million
+                        </option>
+
+                        <option value="20000000">
+                            20 million
+                        </option>
+
+                        <option value="30000000">
+                            30 million
+                        </option>
+
+                        <option value="40000000">
+                            40 million
+                        </option>
+
+                        <option value="50000000">
+                            50 million
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BUTTON -->
+
+            <input
+                type="submit"
+                value="search property"
+                class="btn"
+            >
+
+        </form>
+
+    </section>
+
+</div>
+
+<!-- home section ends -->
+
+<!--service section starts-->
+
+<section class="services">
+
+  <h1 class="heading" style="color: white;">our services</h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="../images/icon-1.png" alt="">
+      <h3>buy house</h3>
+      <p> we help you find & buy your dream home with the best price & easy process
+            </p>
+    </div>
+
+<div class="box">
+      <img src="../images/icon-2.jpg" alt="">
+      <h3>rent house</h3>
+      <p> find affordable rental homes for short-term or log-term stays with flexible options
+          </p>
+    </div>
+
+    <div class="box">
+      <img src="../images/icon-3.jpg" alt="">
+      <h3>sell house</h3>
+      <p>list your property for reach thousands of buyers quickly and easily
+ </p>
+    </div>
+<!--
+    <div class="box">
+      <img src="../images/icon-4.jpg" alt="">
+      <h3>flats and buildings</h3>
+      <p>  we offer modren flats & buildings for sale and rent in the best 
+       <br> locations
+        </p>
+    </div>
+
+    <div class="box">
+      <img src="../images/icon-5.jpg" alt="">
+      <h3>shops and malls</h3>
+      <p>find the perfect shop or mall space for your business with prime locations</p>
+    </div>
+-->
+    <div class="box">
+      <img src="../images/icon-6.png" alt="">
+      <h3>24/7 services</h3>
+      <p> our team is always avilable to help you anytime, day or night, with full support
+           </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!--service section ends-->
+
+<!--listings section starts-->
+
+<section class="listings">
+
+  <h1 class="heading" style="color: white;">properties for buy</h1>
+
+  <div class="box-container">
+
+    <div class="box">
+
+      <div class="admin">
+        <h3>D</h3>
+        <div>
+          <p>Adviser Derje</p>
+          <span>22-September-2026</span>
+        </div>
+      </div>
+
+ <div class="thumb">
+<p class="total-images"><i class="far fa-image"></i><span>4
+</span></p>
+<!--
+<p class="type"><span>house</span><span>sale</span></p>
+-->
+<form action="" method="post" class="save">
+  <button type="submit" name="save" class="far fa-heart"></button>
+</form>
+
+<img src="../images/home3.jpg" alt="">
+
+ </div>
+ 
+ <p class="location"><i class="fas fa-map-marker-alt"></i>
+<span>Megenagna Area, Adis Abeba</span></p>
+<div class="flex">
+  <p><i class="fas fa-bed"></i><span>3 Bedroom</span></p>
+    <p><i class="fas fa-bath"></i><span>4 Bathroom</span></p>
+      <p><i class="fas fa-maximize"></i><span>190sqft</span></p>
+</div>
+<div class="price">   <style>
+
+.price{
+
+    font-size:2rem;
+    color:#DA2C32;
+    padding:1rem 0;
+    font-weight:700;
+
+}
+
+
+.price i{
+
+    margin-right:1rem;
+
+}
+</style>
+<i class="fas fa-money-bill"> 26,000,000 ETB</i>
+
+</div>
+ <a href="view_property3.html" class="btn">view property</a>
+    </div>
+
+     <div class="box">
+
+            <div class="admin">
+        <h3>D</h3>
+        <div>
+          <p>Adviser Derje</p>
+          <span>22-September-2026</span>
+        </div>
+      </div>
+
+ <div class="thumb">
+<p class="total-images"><i class="far fa-image"></i><span>4
+</span></p>
+ 
+
+<form action="" method="post" class="save">
+  <button type="submit" name="save" class="far fa-heart"></button>
+</form>
+
+<img src="../images/home2.jpg" alt="">
+
+ </div>
+  
+ <p class="location"><i class="fas fa-map-marker-alt"></i>
+<span>Bole olompiya, Adis Abeba</span></p>
+<div class="flex">
+  <p><i class="fas fa-bed"></i><span>3 Bedroom</span></p>
+    <p><i class="fas fa-bath"></i><span>2 Bathroom</span></p>
+      <p><i class="fas fa-maximize"></i><span>150sqft</span></p>
+</div>
+<div class="price">   <style>
+
+.price{
+
+    font-size:2rem;
+    color:#DA2C32;
+    padding:1rem 0;
+    font-weight:700;
+
+}
+
+
+.price i{
+
+    margin-right:1rem;
+
+}
+</style>
+<i class="fas fa-money-bill"> 25,000,000 ETB</i>
+
+</div>
+ <a href="view_property2.html" class="btn">view property</a>
+    </div>
+
+     <div class="box">
+
+            <div class="admin">
+       <h3>D</h3>
+        <div>
+          <p>Adviser Derje</p>
+          <span>22-September-2026</span>
+        </div>
+      </div>
+
+ <div class="thumb">
+<p class="total-images"><i class="far fa-image"></i><span>4
+</span></p>
+ 
+
+<form action="" method="post" class="save">
+  <button type="submit" name="save" class="far fa-heart"></button>
+</form>
+
+<img src="../images/home.jpg" alt="">
+
+ </div>
+  
+ <p class="location"><i class="fas fa-map-marker-alt"></i>
+<span>Semit washington, Adis Abeba</span></p>
+<div class="flex">
+  <p><i class="fas fa-bed"></i><span>3 Bedroom</span></p>
+    <p><i class="fas fa-bath"></i><span>2 Bathroom</span></p>
+      <p><i class="fas fa-maximize"></i><span>189sqft</span></p>
+</div>
+<div class="price">   <style>
+
+.price{
+
+    font-size:2rem;
+    color:#DA2C32;
+    padding:1rem 0;
+    font-weight:700;
+
+}
+
+
+.price i{
+
+    margin-right:1rem;
+
+}
+</style>
+<i class="fas fa-money-bill"> 23,000,000 ETB</i>
+
+</div>
+ <a href="view_property4.html" class="btn">view property</a>
+    </div>
+
+  </div>
+
+<div style="margin-top: 2rem; text-align: center;">
+  <a href="listings.html" class="inline-btn">view all properties</a>
+</div>
+
+<!-- rent section starts -->
+<!--
+<section class="listings rent-section">
+
+<h1 class="heading" style="color:white;">properties for rent</h1>
+
+<div class="box-container">
+
+
+ property 1 
+
+<div class="box">
+
+<div class="admin">
+<h3>E</h3>
+<div>
+<p>Esayas Alemayehu</p>
+<span>23-July-2026</span>
+</div>
+</div>
+
+
+<div class="thumb">
+
+<p class="total-images">
+<i class="far fa-image"></i>
+<span>4</span>
+</p>
+
+
+<p class="type">
+<span>Apartment</span>
+<span>Rent</span>
+</p>
+
+
+<form class="save">
+<button 
+class="far fa-heart"
+onclick="toggleFavorite(10,event)">
+</button>
+</form>
+
+
+<img src="../images/house-img-1.jpg">
+
+</div>
+
+
+<h3 class="name">
+Modern Apartment For Rent
+</h3>
+
+
+<p class="location">
+<i class="fas fa-map-marker-alt"></i>
+<span>Bole, Addis Ababa, Ethiopia</span>
+</p>
+
+
+<div class="flex">
+
+<p>
+<i class="fas fa-bed"></i>
+<span>3 Bedroom</span>
+</p>
+
+
+<p>
+<i class="fas fa-bath"></i>
+<span>2 Bathroom</span>
+</p>
+
+
+<p>
+<i class="fas fa-maximize"></i>
+<span>850 sqft</span>
+</p>
+
+
+</div>
+
+
+<div class="price">
+<i class="fas fa-money-bill"></i>
+50,000 ETB /month
+</div>
+
+
+<a href="view_rent.html" class="btn">
+view property
+</a>
+
+
+</div>
+
+ rent section ends 
+<div style="margin-top: 2rem; text-align: center;">
+  <a href="rent.html" class="inline-btn">view all rent</a>
+</div>
+</div>
+</section>
+
+
+-->
+</section>
+
+<!--listings section ends-->
+
+
+<!--footer section starts-->
+
+<footer class="footer">
+
+  <section class="flex">
+
+<div class="box">
+<a href="tel:+251924274555"><i class="fas fa-phone"></i>
+  <span>+251924274555</span></a>
+  <a href="tel:+251913447598"><i class="fas fa-phone"></i>
+  <span>+251913447598</span></a>
+  <a href="mailto:wkconsutant55@gmail.com"><i class="fas fa-envelope"></i>
+  <span>wkconsultant55@gmail.com</span></a>
+   <a href="#"><i class="fas fa-map-marker-alt"></i>
+  <span> Adis Abeba, Ethiopia</span></a>
+</div>
+
+<div class="box">
+<a href="home.html"><span>home</span></a>
+<a href="about.html"><span>about us</span></a>
+<a href="contact.html"><span>contact us</span></a>
+<a href="listings.html"><span>properties</span></a>
+<a href="#"><span>saved properties</span></a>
+</div>
+
+<div class="box">
+<a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i>
+</a>
+<a href="#"><span>twitter</span><i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.linkedin.com/in/dereje-shitu"><span>linkedin</span><i class="fab fa-linkedin"></i>
+</a>
+<a href="#"><span>instagram</span><i class="fab fa-instagram"></i>
+</a>
+</div>
+
+  </section>
+
+  <div class="credit">&copy;copyright @2026 by <span>developed by esayas</span> all rights reserved! </div>
+
+</footer>
+
+<!--footer section ends-->
+
+<script>
+
+document
+    .getElementById("propertySearchForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const location =
+            document.querySelector(
+                '[name="location"]'
+            ).value;
+
+        const type =
+            document.querySelector(
+                '[name="type"]'
+            ).value;
+
+        const bedrooms =
+            document.querySelector(
+                '[name="bhk"]'
+            ).value;
+
+        const minimum =
+            document.querySelector(
+                '[name="minimum"]'
+            ).value;
+
+        const maximum =
+            document.querySelector(
+                '[name="maximum"]'
+            ).value;
+
+
+        const url =
+            `search.html?location=${encodeURIComponent(location)}`
+            + `&type=${encodeURIComponent(type)}`
+            + `&bedrooms=${encodeURIComponent(bedrooms)}`
+            + `&minimum=${encodeURIComponent(minimum)}`
+            + `&maximum=${encodeURIComponent(maximum)}`;
+
+
+        window.location.href = url;
+
+    });
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const searchForm =
+        document.getElementById("propertySearchForm");
+
+    searchForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const location =
+            document.getElementById("searchLocation").value.trim();
+
+        const type =
+            document.getElementById("searchType").value;
+
+        const bedrooms =
+            document.getElementById("searchBedrooms").value;
+
+        const minimum =
+            document.getElementById("searchMinimum").value;
+
+        const maximum =
+            document.getElementById("searchMaximum").value;
+
+
+        // URL parameters
+        const params = new URLSearchParams();
+
+
+        if (location !== "") {
+            params.set("location", location);
+        }
+
+        if (type !== "") {
+            params.set("type", type);
+        }
+
+        if (bedrooms !== "") {
+            params.set("bedrooms", bedrooms);
+        }
+
+        if (minimum !== "") {
+            params.set("minPrice", minimum);
+        }
+
+        if (maximum !== "") {
+            params.set("maxPrice", maximum);
+        }
+
+
+        // Go to search results
+        window.location.href =
+            "search.html?" + params.toString();
+
+    });
+
+});
+</script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

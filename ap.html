@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+
+    <!--font awesome cdn link-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css file link-->
+     <link rel="stylesheet" href="../css/style.css">
+     <style>
+        /* Custom styles for this page */
+        
+
+        .back-home { color: var(--text-light); 
+          text-decoration: none; 
+          font-weight: 600;
+           display: flex;
+            align-items: center; 
+            gap: 5px;
+             transition: 0.3s; }
+        .back-home:hover { color: var(--primary-color); }
+
+        .form-container { max-width: 700px; 
+          margin: 40px auto;
+           background-color: var(--white);
+            padding: 40px;
+             border-radius: 12px; 
+             box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .form-title { margin-bottom: 30px;
+           border-bottom: 2px solid #f3f4f6; 
+           padding-bottom: 15px; }
+        .form-title h2 { color: var(--text-dark);
+           font-size: 26px; }
+        .form-title p { color: var(--text-light); 
+          font-size: 14px; margin-top: 5px; }
+
+        /* .form-grid { display: grid; 
+          grid-template-columns: 1fr 1fr;
+           gap: 20px; }*/
+
+        .full-width { grid-column: span 2; }
+        .input-group { display: flex; 
+          flex-direction: column;
+           gap: 8px; }
+        .input-group label { font-size: 14px; 
+          font-weight: 600; 
+          color: var(--text-dark); }
+        .input-group input,
+         .input-group select,
+          .input-group textarea { padding: 12px 15px;
+             border: 1px solid #0b0e13;
+              border-radius: 8px; 
+              outline: none; 
+              font-size: 15px; 
+              transition: 0.3s; }
+        .input-group input:focus, 
+        .input-group select:focus,
+         .input-group textarea:focus { border-color: var(--primary-color);
+           box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
+        
+           .input-group{
+            color: #0b0e13;
+           }
+        .submit-btn { background-color: var(--main-color);
+           color: white;
+            border: none; 
+            padding: 14px;
+             border-radius: 8px; 
+             font-size: 16px; 
+             font-weight: bold;
+              cursor: pointer; 
+              width: 100%;
+               margin-top: 20px;
+                transition: 0.3s; }
+        .submit-btn:hover { background-color: #7b7b7b; }
+
+        .success-box, .error-box { display: none;
+           background-color: #ecfdf5; 
+           border: 1px solid var(--primary-color);
+            color: #065f46;
+             padding: 20px; 
+             border-radius: 8px; 
+             text-align: center; 
+             margin-bottom: 20px; }
+        .error-box { background-color: #fee2e2;
+           border-color: #ef4444;
+            color: #b91c1c; }
+        .success-box i, .error-box i { font-size: 40px;
+           margin-bottom: 10px; }
+        
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; }
+         .full-width { grid-column: span 1; } 
+         .form-container { padding: 20px;
+           margin: 20px 10px; }
+          
+          }
+    </style>
+  </head>
+<body>
+  
+<!--header section starts-->
+
+<header class="header">
+
+  <nav class="navbar nav-1">
+    <section class="flex">
+            <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <a href="index.html" class="logo"><i class="fas fa-house"></i>WAKA
+      </a>
+
+      <!--
+      <ul>
+        <li><a href="add-property.html">post property<i class="fas fa-paper-plane"></i></a></li>
+      </ul>
+      -->
+    </section>
+  </nav>
+  
+  <nav class="navbar nav-2">
+    <section class="flex">
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="listings.html">Buy</a>
+          <!--
+        <ul>
+           <li><a href="#">House</a></li>
+           <li><a href="#">Flat</a></li>
+           <li><a href="#">Shop</a></li>
+           <li><a href="#">Ready to move</a></li>
+           <li><a href="#"> furnished</a></li>
+        </ul>
+        -->
+      </li>
+       <li><a href="#">Sell </a>
+        <ul>
+           <li><a href="add-property.html">post property</a></li>
+         <!-- <li><a href="seller-dashboard.html"> dashboard</a></li>-->
+        </ul>
+      </li>
+       <li><a href="rent.html">Rent</a>
+         <!--
+        <ul>
+           <li><a href="#">House</a></li>
+           <li><a href="#">Flat</a></li>
+           <li><a href="#">Shop</a></li>
+        </ul>
+      </li>
+     -->
+       <li><a href="#">Help</a>
+        <ul>
+           <li><a href="about.html">About us</a></i></li>
+           <li><a href="contact.html">Contact us</a></i></li>
+   
+        </ul>
+      </li>
+      </ul>
+    </div>
+
+<ul>
+  <!--
+  <li><a href="#">favorite <i class="far fa-heart"></i></a></li>
+   -->
+  <li><a href="#">account</a>
+  <ul>
+    <li><a href="login.html">login</a></li>
+    <li><a href="register.html">register</a></li>    
+  </ul>
+  </li>
+</ul>
+
+    </section>
+  </nav>
+</header>
+
+<!--header section ends-->
+
+ 
+
+
+
+<!--
+</head>
+<body>
+-->
+   
+    <div class="form-container">
+        
+        <div class="success-box" id="successMsg">
+            <i class='bx bx-check-circle'></i>
+            <h3 style="color: white;">እንኳን ደስ አለዎት!</h3>
+            <p style="color: white;">የቤቱ መረጃ በተሳካ ሁኔታ ተመዝግቧል። ወደ ቤቶች ዝርዝር ገጽ ተመልሰው መመልከት ይችላሉ።</p>
+            <a href="properties.html" class="btn-primary" style="margin-top: 15px; display: inline-block;">ወደ ዝርዝሩ ሂድ</a>
+        </div>
+
+        <div class="error-box" id="errorMsg">
+            <i class='bx bx-x-circle'></i>
+            <h3 style="color: white;">ስህተት ተከስቷል!</h3>
+            <p id="errorText" style="color: white;">መረጃውን ማስገባት አልተቻለም። እባክዎ እንደገና ይሞክሩ።</p>
+        </div>
+
+        <div class="form-title" id="formHeader">
+            <h2 style="color: black;">አዲስ ቤት/መሬት ይጫኑ</h2>
+            <p style="color: black;">እባክዎን ከታች ያሉትን ክፍሎች በትክክል በመሙላት የቤትዎን ማስታወቂያ ያውጡ።</p>
+</div>
+<form id="propertyForm">
+
+    <div class="form-grid">
+
+        <div class="input-group full-width">
+            <label for="title">የቤት ርዕስ (ማስታወቂያ ስም)</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="ምሳሌ፦ ቦሌ የሚሸጥ ባለ 3 ክፍል አፓርትመንት"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="type">የቤት አይነት</label>
+            <select id="type" required>
+                <option value="">ይምረጡ...</option>
+                <option value="Apartment">አፓርትመንት</option>
+                <option value="Villa">ቪላ ቤት</option>
+                <option value="Condo">ኮንዶሚኒየም</option>
+                <option value="Land">መሬት</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="price">ዋጋ (በኢትዮጵያ ብር)</label>
+            <input
+                type="number"
+                id="price"
+                placeholder="ምሳሌ፦ 12500000"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="location">አድራሻ (ቦታ)</label>
+            <input
+                type="text"
+                id="location"
+                placeholder="ምሳሌ፦ ቦሌ፣ አዲስ አበባ"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="phone">የባለቤቱ/ደላላው ስልክ ቁጥር</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="ምሳሌ፦ 0911223344"
+                required
+            >
+        </div>
+
+       <div class="input-group">
+    <label for="bedrooms">
+        የመኝታ ክፍል ብዛት
+    </label>
+
+    <input
+        type="number"
+        id="bedrooms"
+        name="bedrooms"
+        min="0"
+        placeholder="ምሳሌ፦ 3"
+    >
+</div>
+        
+        <div class="input-group">
+    <label for="bathrooms">
+        የመታጠቢያ ክፍል ብዛት
+    </label>
+
+    <input
+        type="number"
+        id="bathrooms"
+        name="bathrooms"
+        min="0"
+        placeholder="ምሳሌ፦ 2"
+    >
+</div>
+
+        <div class="input-group">
+            <label for="area">የቤቱ ስፋት (በካሬ ሜትር - m²)</label>
+            <input
+                type="number"
+                id="area"
+                placeholder="ምሳሌ፦ 140"
+            >
+        </div>
+
+        <div class="input-group full-width">
+            <label for="description">ተጨማሪ ዝርዝር ማብራሪያ</label>
+            <textarea
+                id="description"
+                rows="6"
+                placeholder="ስለ ቤቱ አቀማመጥ፣ ስለ ውሃና መብራት መኖር ወዘተ... እዚህ ይጻፉ"
+            ></textarea>
+        </div>
+
+        <div class="input-group full-width">
+            <label for="imageFile">የቤቱ ፎቶ</label>
+            <input
+                type="file"
+                id="imageFile"
+                accept="image/*"
+                required
+            >
+<div class="input-group full-width">
+    <label for="bedroomImage">🛏️ የመኝታ ክፍል ፎቶ</label>
+    <input
+        type="file"
+        id="bedroomImage"
+        accept="image/jpeg,image/png,image/webp"
+    >
+</div>
+
+<div class="input-group full-width">
+    <label for="bathroomImage">🚿 የመታጠቢያ ክፍል ፎቶ</label>
+    <input
+        type="file"
+        id="bathroomImage"
+        accept="image/jpeg,image/png,image/webp"
+    >
+</div>
+
+<div class="input-group full-width">
+    <label for="kitchenImage">🍳 የወጥ ቤት ፎቶ</label>
+    <input
+        type="file"
+        id="kitchenImage"
+        accept="image/jpeg,image/png,image/webp"
+    >
+</div>
+
+<div class="input-group full-width">
+    <label for="hallImage">🛋️ የሳሎን/ማረፊያ ፎቶ</label>
+    <input
+        type="file"
+        id="hallImage"
+        accept="image/jpeg,image/png,image/webp"
+    >
+</div>
+        </div>
+
+        <div class="input-group full-width">
+          <button
+    type="submit"
+    id="submitBtn"
+    class="submit-btn"
+>
+                ቤት ይጫኑ
+            </button>
+        </div>
+
+    </div>
+
+</form>
+
+
+    </div>
+
+<!--
+</body>
+</html>-->
+
+
+
+
+
+<!--footer section starts-->
+
+<footer class="footer">
+
+  <section class="flex">
+
+<div class="box">
+<a href="tel:+251924274555"><i class="fas fa-phone"></i>
+  <span>+251924274555</span></a>
+  <a href="tel:+251913447598"><i class="fas fa-phone"></i>
+  <span>+251913447598</span></a>
+  <a href="mailto:wkconsutant55@gmail.com"><i class="fas fa-envelope"></i>
+  <span>wkconsutant55@gmail.com</span></a>
+   <a href="#"><i class="fas fa-map-marker-alt"></i>
+  <span> Adis Abeba, Ethiopia</span></a>
+</div>
+
+<div class="box">
+<a href="index.html"><span>home</span></a>
+<a href="about.html"><span>about us</span></a>
+<a href="contact.html"><span>contact us</span></a>
+<a href="listings.html"><span>properties</span></a>
+<a href="#"><span>saved properties</span></a>
+</div>
+
+<div class="box">
+<a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i>
+</a>
+<a href="#"><span>twitter</span><i class="fab fa-twitter"></i>
+</a>
+<a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i>
+</a>
+<a href="#"><span>instagram</span><i class="fab fa-instagram"></i>
+</a>
+</div>
+
+  </section>
+
+  <div class="credit">&copy;copyright @2026 by <span>developed by esayas</span> all rights reserved! </div>
+
+</footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script src="../js/ap.js"></script>
+
+ 
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
+  
+ 
+</body>
+</html>

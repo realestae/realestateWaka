@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>View Property - WAKA</title>
+
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    >
+
+
+    <!-- YOUR CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <nav class="navbar nav-1">
+
+        <section class="flex">
+
+            <a
+                href="listings.html"
+                class="back-home"
+            >
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                <i class="fas fa-house"></i>
+                WAKA
+            </a>
+
+
+            <ul>
+
+                <li>
+                    <a href="ap.html">
+                        Post Property
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </nav>
+
+
+
+    <nav class="navbar nav-2">
+
+        <section class="flex">
+
+
+            <div
+                id="menu-btn"
+                class="fas fa-bars"
+            ></div>
+
+
+            <div class="menu">
+
+                <ul>
+
+                    <li>
+                        <a href="listings.html">
+                            Buy
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                    </li>
+
+
+                    <li>
+
+                        <a href="#">
+                            Sell
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+
+
+                        <ul>
+
+                            <li>
+                                <a href="ap.html">
+                                    Post Property
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+                        <a href="rent.html">
+                            Rent
+                        </a>
+                    </li>
+
+
+                    <li>
+
+                        <a href="#">
+                            Help
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+
+
+                        <ul>
+
+                            <li>
+                                <a href="about.html">
+                                    About Us
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="contact.html">
+                                    Contact Us
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="#">
+                        Saved
+                        <i class="far fa-heart"></i>
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="#">
+                        Account
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+
+
+                    <ul>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="register.html">
+                                Register
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     LOADING
+===================================================== -->
+
+<div
+    id="propertyLoading"
+    style="
+        text-align:center;
+        padding:40px;
+        font-size:18px;
+    "
+>
+
+    የቤቱ መረጃ በመጫን ላይ...
+
+</div>
+
+
+
+<!-- =====================================================
+     ERROR
+===================================================== -->
+
+<div
+    id="propertyError"
+    style="
+        display:none;
+        text-align:center;
+        padding:40px;
+        color:red;
+        font-size:18px;
+    "
+></div>
+
+
+
+<!-- =====================================================
+     PROPERTY
+===================================================== -->
+
+<section
+    class="view-property"
+    id="propertyContainer"
+    style="display:none;"
+>
+
+
+    <div class="details">
+
+
+        <!-- =================================================
+             IMAGES
+        ================================================== -->
+
+        <div class="thumb">
+
+
+            <!-- MAIN IMAGE -->
+
+            <div class="big-image">
+
+                <img
+                    id="mainPropertyImage"
+                    src="../images/house-img-1.jpg"
+                    alt="Property Image"
+                    style="
+                        width:100%;
+                        display:block;
+                    "
+                >
+
+            </div>
+
+
+
+            <!-- THUMBNAILS -->
+
+            <div
+                class="small-images"
+                id="propertyThumbnails"
+            >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TITLE
+        ================================================== -->
+
+        <h3
+            class="name"
+            id="propertyTitle"
+        >
+            Property
+        </h3>
+
+
+
+        <!-- =================================================
+             LOCATION
+        ================================================== -->
+
+        <p
+            class="location"
+            id="propertyLocation"
+        >
+
+            <i class="fas fa-map-marker-alt"></i>
+
+            <span>
+                -
+            </span>
+
+        </p>
+
+
+
+        <!-- =================================================
+             PROPERTY INFO
+        ================================================== -->
+
+        <div class="info">
+
+
+            <!-- PRICE -->
+
+            <p>
+
+                <i class="fas fa-tag"></i>
+
+                <span id="propertyPrice">
+                    -
+                </span>
+
+            </p>
+
+
+
+            <!-- OWNER -->
+
+            <p>
+
+                <i class="fas fa-user"></i>
+
+                <span>
+                    Esayas Alemayehu
+                </span>
+
+            </p>
+
+
+
+            <!-- PHONE -->
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                <a
+                    id="propertyPhone"
+                    href="#"
+                >
+                    -
+                </a>
+
+            </p>
+
+
+
+            <!-- TYPE -->
+
+            <p>
+
+                <i class="fas fa-building"></i>
+
+                <span id="propertyType">
+                    -
+                </span>
+
+            </p>
+
+
+
+            <!-- STATUS -->
+
+            <p>
+
+                <i class="fas fa-handshake"></i>
+
+                <span id="propertyState">
+                    Available
+                </span>
+
+            </p>
+
+
+
+            <!-- DATE -->
+
+            <p>
+
+                <i class="fas fa-calendar"></i>
+
+                <span id="propertyDate">
+                    -
+                </span>
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             DETAILS
+        ================================================== -->
+
+        <h3 class="title">
+            Details
+        </h3>
+
+
+        <div class="flex">
+
+
+            <!-- LEFT -->
+
+            <div class="box">
+
+
+                <p>
+
+                    <i>Bedroom :</i>
+
+                    <span id="propertyBedrooms">
+                        -
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i>Bathroom :</i>
+
+                    <span id="propertyBathrooms">
+                        -
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i>Area :</i>
+
+                    <span id="propertyArea">
+                        -
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i>Property Type :</i>
+
+                    <span id="propertyTypeDetail">
+                        -
+                    </span>
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="box">
+
+
+                <p>
+
+                    <i>Status :</i>
+
+                    <span id="propertyStatusDetail">
+                        Available
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i>Phone :</i>
+
+                    <span id="propertyPhoneDetail">
+                        -
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    <i>Location :</i>
+
+                    <span id="propertyLocationDetail">
+                        -
+                    </span>
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             EXTRA PROPERTY IMAGES
+        ================================================== -->
+
+        <h3 class="title">
+            Property Images
+        </h3>
+
+
+        <div class="flex">
+
+
+            <!-- BEDROOM -->
+
+            <div class="box">
+
+                <p>
+
+                    <i class="fas fa-bed"></i>
+
+                    <span>
+                        Bedroom Image
+                    </span>
+
+                </p>
+
+
+                <img
+                    id="bedroomPropertyImage"
+                    src=""
+                    alt="Bedroom"
+                    style="
+                        width:100%;
+                        display:none;
+                    "
+                >
+
+            </div>
+
+
+
+            <!-- BATHROOM -->
+
+            <div class="box">
+
+                <p>
+
+                    <i class="fas fa-bath"></i>
+
+                    <span>
+                        Bathroom Image
+                    </span>
+
+                </p>
+
+
+                <img
+                    id="bathroomPropertyImage"
+                    src=""
+                    alt="Bathroom"
+                    style="
+                        width:100%;
+                        display:none;
+                    "
+                >
+
+            </div>
+
+
+
+            <!-- KITCHEN -->
+
+            <div class="box">
+
+                <p>
+
+                    <i class="fas fa-utensils"></i>
+
+                    <span>
+                        Kitchen Image
+                    </span>
+
+                </p>
+
+
+                <img
+                    id="kitchenPropertyImage"
+                    src=""
+                    alt="Kitchen"
+                    style="
+                        width:100%;
+                        display:none;
+                    "
+                >
+
+            </div>
+
+
+
+            <!-- HALL -->
+
+            <div class="box">
+
+                <p>
+
+                    <i class="fas fa-couch"></i>
+
+                    <span>
+                        Hall Image
+                    </span>
+
+                </p>
+
+
+                <img
+                    id="hallPropertyImage"
+                    src=""
+                    alt="Hall"
+                    style="
+                        width:100%;
+                        display:none;
+                    "
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             DESCRIPTION
+        ================================================== -->
+
+        <h3 class="title">
+            Description
+        </h3>
+
+
+        <p
+            class="description"
+            id="propertyDescription"
+        >
+            -
+        </p>
+
+
+
+        <!-- =================================================
+             BUTTONS
+        ================================================== -->
+
+        <div
+            style="
+                display:flex;
+                gap:10px;
+                flex-wrap:wrap;
+            "
+        >
+
+
+            <!-- CALL SELLER -->
+
+            <a
+                href="#"
+                id="callButton"
+                class="inline-btn"
+                style="display:none;"
+            >
+
+                <i class="fas fa-phone"></i>
+
+                Call Seller
+
+            </a>
+
+
+
+            <!-- BACK -->
+
+            <a
+                href="listings.html"
+                class="inline-btn"
+            >
+
+                <i class="fas fa-arrow-left"></i>
+
+                Back
+
+            </a>
+
+
+
+            <!-- SOLD -->
+
+            <button
+                id="soldButton"
+                class="inline-btn"
+                type="button"
+                style="display:none;"
+            >
+
+                <i class="fas fa-check"></i>
+
+                Mark as Sold
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <section class="flex">
+
+
+        <div class="box">
+
+
+            <a href="tel:+251924274555">
+
+                <i class="fas fa-phone"></i>
+
+                <span>
+                    +251924274555
+                </span>
+
+            </a>
+
+
+            <!-- FIXED MAILTO -->
+            <a href="mailto:wkconsutant55@gmail.com">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>
+                    wkconsutant55@gmail.com
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                <span>
+                    Addis Ababa, Ethiopia
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+
+        <div class="box">
+
+            <a href="index.html">
+                <span>Home</span>
+            </a>
+
+            <a href="about.html">
+                <span>About Us</span>
+            </a>
+
+            <a href="contact.html">
+                <span>Contact Us</span>
+            </a>
+
+            <a href="listings.html">
+                <span>Properties</span>
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <div class="credit">
+
+        &copy; Copyright @2026 by
+
+        <span>
+            developed by Esayas
+        </span>
+
+        all rights reserved!
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<!-- SUPABASE CONFIG -->
+<script src="../js/supabase.js"></script>
+
+
+<!-- VIEW PROPERTY -->
+<script src="../js/view_property.js"></script>
+
+
+<!-- MAIN SCRIPT -->
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
